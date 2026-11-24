@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Giới thiệu bản thân</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="card">
+            <div class="avatar">
+                <img src="anh.jpg" alt="Ảnh đại diện" id="avatar-img">
+            </div>
+            
+            <h1>👋 Xin chào, mình là <span id="ten-ban">Phan THị Thu Hương</span>!</h1>
+            
+            <p class="intro">
+                Mình là sinh viên/năm sinh 2006. Mình ở nhà tên là cún, thích cười và luôn trân trọng những điều nhỏ bé mỗi ngày ✨
+            </p>
+            
+            <div class="section">
+                <h2>📌 Thông tin về mình</h2>
+                <ul>
+                    <li>🎓 Năm sinh: <strong>2006</strong></li>
+                    <li>🏫 Học tại: <strong>[Đại Học Luật Quốc Gia Hà Nội]</strong></li>
+                    <li>📍 Nơi sống: <strong>Thủ Đô Hà Nội</strong></li>
+                    <li>💖 Sở thích: <strong>mua sắm, hát, ngủ , học, đi chơi</strong></li>
+                </ul>
+            </div>
+            
+            <div class="section">
+                <h2>💡 Những thứ mình yêu thích</h2>
+                <ul>
+                    <li>🛍️ đi mua sắm và trung tâm thương mại</li>
+                    <li>🎶🎤 ca háttt</li>
+                    <li>☕ Đi cafe & trò chuyện cùng bạn bè</li>
+                    <li>💅làm đẹpp </li>
+                </ul>
+            </div>
+
+<!-- 🏆 Mục Thành tựu có nút bấm -->
+            <div class="section">
+                <h2>🏆 Thành tựu của mình</h2>
+                <button class="btn" onclick="showAchievements()">Nhấn để xem thành tựu ✨</button>
+                <div id="achievements-list" style="display: none; margin-top: 15px;">
+                    <ul>
+                        <li>✅ Hoàn thành tốt các năm học</li>
+                        <li>🎓 Đạt học lực Xuất sắc</li>
+                        <li>💻 Có kỹ năng phản biện tôp 1 </li>
+                        <li>🌟 Luôn cố gắng hoàn thiện bản thân mỗi ngày</li>
+                        <li>✨ [Thủ Khoa Văn heheh]</li>
+                    </ul>
+<!-- 🖼️ Thêm ảnh thành tựu ở đây -->
+                    <div class="achievement-images">
+                        <img src="hinh-thanh-tuu.jpg" alt="Ảnh thành tựu" class="achievement-img" style="width: 250px; height: auto;">
+                    </div>
+                </div>
+            </div>
+
+            <div class="section contact">
+                <h2>📩 Liên hệ với mình</h2>
+                <div class="social">
+                    <a href="https://www.facebook.com/huongphan2301" class="fb">Facebook</a>
+                    <a href="https://www.instagram.com/_janr02?fbclid=IwY2xjawVyO2hleHRuA2FlbQIxMABwZG9mBWJyaWQRMUZMT1JUQUdFOEp4Q3k4MmVzcnRjBmFwcF9pZBAyMjIwMzkxNzg4MjAwODkyAAEfgvR1eJPa6XupLKE57pAKY-iqiAXVkhpcrEzLOy52roaWfN8YOofFVbz_gC4_aem_JrxUkNqxT--rBJwS6y8dcg" class="ig">Instagram</a>
+                    <a href="https://www.tiktok.com/@_thuhuongphan" class="tt">TikTok</a>
+                    <a href="#" class="mail">Email</a>
+                </div>
+            </div>
+        </div>
+<!-- 🔐 Công tắc bí mật - Vị trí cuối cùng -->
+            <div class="section">
+                <h2>🔒 Công tắc bí mật</h2>
+                <button class="btn secret-btn" onclick="openSecret()">🔐 Nhấn để mở</button>
+                
+                <div id="secret-content" style="display: none; margin-top: 15px; padding: 25px; background: linear-gradient(135deg, #fff5f8, #fff0f5); border-radius: 16px; border: 3px solid #f8d7da;">
+                    <p class="secret-message">
+                        Và cún còn có 1 người ở phương xa lúc nào cũng dõi về phía em đó chính là anh hehehe<br><br>
+                        Anh thương cún nhiều lắm ạa 💖<br>
+                        Tặng em nhé — trước sau cũng như vậy, không có thay đổi đâu ✨<br>
+                        Yêu em nhiều 💕
+                    </p>
+                    <div class="secret-images">
+                        <img src="anh-chung-1.jpg" alt="Chúng ta" class="secret-img">
+                        <img src="anh-chung-2.jpg" alt="Chúng ta" class="secret-img">
+                    </div>
+                </div>
+            </div>
+        
+        <footer>
+            <p>✨ Cảm ơn bạn đã ghé thăm! ✨</p>
+        </footer>
+    </div>
+
+<script>
+    function showAchievements() {
+        const list = document.getElementById('achievements-list');
+        list.style.display = list.style.display === 'none' ? 'block' : 'none';
+    }
+
+      function openSecret() {
+        const matKhauDung = "1912";
+        let matKhauNhap = prompt("🐶 Nhập mật khẩu để mở bí mật nha cún:");
+        
+        if (matKhauNhap === matKhauDung) {
+            document.getElementById('secret-content').style.display = 'block';
+            alert("✅ Đúng rồi! Mở ra xem nha cún ~ 💕");
+        } else if (matKhauNhap !== null) {
+            alert("❌ Sai mật khẩu rồi, thử lại nhé cún ~ 😊");
+        }
+    }
+</script>
+</body>
+</html>
